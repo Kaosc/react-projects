@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: 100;
+}
+
+main {
+  margin: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* NAV */
+
+nav {
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 31.31px;
+  height: 26.22px;
+  margin-right: 10px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.nav-head {
+  display: flex;
+  margin: 20px;
+}
+
+.nav-des {
+  margin: 20px;
+}
+
+/* FORMS */ 
+
+.forms {
+  width: 650px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.form-inputs {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.input-one {
+  margin-right: 20px;
+}
+
+.input-one, .input-two {
+  border-radius: 5px;
+  border-width: 1px;
+  width: 315px;
+  height: 35px;
+  border: 2px solid #A626D3;
+  background-color: black;
+  text-indent: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.form-button {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.meme-img {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 3px;
+}
+
+.form-button:hover {
+  filter: opacity(60%);
+}
+
+.meme {
+  position: relative;
+}
+
+.meme--text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
