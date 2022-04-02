@@ -10,7 +10,7 @@ function App() {
     fetch("https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple")
       .then(res => res.json())
       .then(quesData => setAllQuestions(quesData))
-  }, [gameStatus]) 
+  }, []) 
 
   // CHANGING GAME STATUS
   function startGame() {
