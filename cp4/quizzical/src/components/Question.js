@@ -3,26 +3,39 @@ import he from 'he';
 
 function Question (props) {
 
-    const questionData = props.questionObject
+    const quesData = props.questionObject
 
-    const answersEl = questionData.allAnswers.map((answer, index) => {
+    const answersEl = quesData.allAnswers.map((answer, index) => {
+
+        let answerStatus = () => {
+            if (quesData.currentAnswer === answer && !quesData.checked){
+                return "selected"
+            }else if(quesData.currentAnswer === answer & quesData.currentAnswer === quesData.correct_answer & quesData.checked) {
+                return "correct"
+            }else if(quesData.currentAnswer === answer & quesData.currentAnswer !== quesData.correct_answer & quesData.checked) {
+                return "wrong"
+            }else{
+                return "unselected"
+            }
+        }
+        
         return (
             <button
-            className={questionData.selected ? "selected" : ""}
             key={index}
-            id={questionData.id}
+            id={quesData.id}
             value={answer}
-            selected={false}
+            disabled={props.gameStatus}
             onClick={props.handleButtonClick}
+            className={answerStatus()}
             >
-                {he.decode(answer)}
+            {he.decode(answer)}
             </button>
         )
     })
 
     return (    
         <div>
-            <div>{he.decode(questionData.question)}</div>
+            <div>{he.decode(quesData.question)}</div>
             <div>{answersEl}</div>
         </div>
     )

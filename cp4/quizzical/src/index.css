@@ -43,3 +43,15 @@ code {
 .selected {
   background-color: #4D5B9E;
 }
+
+.wrong {
+  background-color: rgb(199, 73, 73);
+}
+
+.correct {
+  background-color: rgb(117, 204, 117);
+}
+
+.unselected {
+  background-color: aliceblue;
+}
