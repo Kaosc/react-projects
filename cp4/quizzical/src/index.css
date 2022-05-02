@@ -1,6 +1,6 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: #1A1B26;
+  color: rgb(196, 196, 196);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -40,18 +40,113 @@ code {
   color: white;
 }
 
-.selected {
-  background-color: #4D5B9E;
+.quizpage-container {
+  margin: 0 auto;
+  max-width: 1000px;
+  align-items: center;
+  justify-content: center;
 }
 
-.wrong {
-  background-color: rgb(199, 73, 73);
+.quizpage-title {
+  text-align: center;
+  color: #6e7fd4;
+  font-size: 50px;
 }
 
-.correct {
-  background-color: rgb(117, 204, 117);
+.question-box {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin: 17px 10px;
+}
+
+.question-number {
+  color: #6e7fd4;
 }
 
 .unselected {
-  background-color: aliceblue;
+  background: #414d8b;
+  box-shadow: 0 3px #869afd;
+  color: rgb(196, 196, 196);
+}
+
+.selected {
+  background: #7385dd;
+  box-shadow: 0 3px #e7e7e7;
+  color: black;
+}
+
+.wrong {
+  background: rgb(199, 73, 73);
+  box-shadow: 0 3px #f07b7b;
+
+}
+
+.correct {
+  background: rgb(117, 204, 117);
+  box-shadow: 0 3px #b3fcb3;
+
+}
+
+
+button:disabled,
+button[disabled]{
+  color: black;
+}
+
+.css-button-3d--blue {
+  min-width: 130px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+.css-button-3d--blue:hover {
+  top: 1px;
+}
+.css-button-3d--blue:active {
+  top: 5px;
+}
+
+.css-button-2 {
+  margin: 45px 10px;
+  min-width: 200px;
+  height: 50px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 23px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #465bc5;
+  box-shadow: 0 5px #6282b3;
+}
+.css-button-2:hover {
+  box-shadow: 0 3px #4433ff;
+  top: 1px;
+}
+.css-button-2:active {
+  box-shadow: 0 0 #4433ff;
+  top: 5px;
+}
+
+.loading-container {
+  font-weight: bold;
+  font-size:70px;
+  margin: 100px auto;
+  max-width: 1000px;
+  text-align: center;
 }

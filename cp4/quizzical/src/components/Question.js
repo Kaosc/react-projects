@@ -4,18 +4,19 @@ import he from 'he';
 function Question (props) {
 
     const quesData = props.questionObject
-
     const answersEl = quesData.allAnswers.map((answer, index) => {
 
         let answerStatus = () => {
             if (quesData.currentAnswer === answer && !quesData.checked){
-                return "selected"
+                return "selected css-button-3d--blue"
             }else if(quesData.currentAnswer === answer & quesData.currentAnswer === quesData.correct_answer & quesData.checked) {
-                return "correct"
+                return "correct css-button-3d--blue"
             }else if(quesData.currentAnswer === answer & quesData.currentAnswer !== quesData.correct_answer & quesData.checked) {
-                return "wrong"
+                return "wrong css-button-3d--blue"
+            }else if(quesData.currentAnswer !== answer & quesData.correct_answer === answer & quesData.checked) {
+                return "correct css-button-3d--blue"
             }else{
-                return "unselected"
+                return "unselected css-button-3d--blue"
             }
         }
         
@@ -24,9 +25,9 @@ function Question (props) {
             key={index}
             id={quesData.id}
             value={answer}
-            disabled={props.gameStatus}
+            disabled={!props.gameStatus}
             onClick={props.handleButtonClick}
-            className={answerStatus()}
+            className={answerStatus() }
             >
             {he.decode(answer)}
             </button>
@@ -35,8 +36,11 @@ function Question (props) {
 
     return (    
         <div>
-            <div>{he.decode(quesData.question)}</div>
-            <div>{answersEl}</div>
+            <div className="question-box">
+                <span className="question-number">{props.questionNumber +". "}</span>
+                {he.decode(quesData.question)}
+                </div>
+            <div className="answer-btn">{answersEl} </div>
         </div>
     )
 }
