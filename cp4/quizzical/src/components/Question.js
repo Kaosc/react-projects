@@ -8,15 +8,15 @@ function Question (props) {
 
         let answerStatus = () => {
             if (quesData.currentAnswer === answer && !quesData.checked){
-                return "selected css-button-3d--blue"
+                return "selected answer-btn"
             }else if(quesData.currentAnswer === answer & quesData.currentAnswer === quesData.correct_answer & quesData.checked) {
-                return "correct css-button-3d--blue"
+                return "correct answer-btn"
             }else if(quesData.currentAnswer === answer & quesData.currentAnswer !== quesData.correct_answer & quesData.checked) {
-                return "wrong css-button-3d--blue"
+                return "wrong answer-btn"
             }else if(quesData.currentAnswer !== answer & quesData.correct_answer === answer & quesData.checked) {
-                return "correct css-button-3d--blue"
+                return "correct answer-btn"
             }else{
-                return "unselected css-button-3d--blue"
+                return "unselected answer-btn"
             }
         }
         
@@ -40,7 +40,7 @@ function Question (props) {
                 <span className="question-number">{props.questionNumber +". "}</span>
                 {he.decode(quesData.question)}
                 </div>
-            <div className="answer-btn">{answersEl} </div>
+            {answersEl}
         </div>
     )
 }

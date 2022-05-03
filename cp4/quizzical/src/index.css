@@ -14,6 +14,22 @@ code {
     monospace;
 }
 
+/* lOADING PAGE */
+
+.loading-container {
+  font-weight: bold;
+  font-size:70px;
+  margin: 100px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* START PAGE */
+
+.start-title {
+  font-size: 70px;
+}
+
 .start{
   max-width: 500px;
   text-align: center;
@@ -24,21 +40,38 @@ code {
   color: #4D5B9E;
 }
 
-.start button {
+.start-btn {
   background-color: #4D5B9E;
   text-align: center;
-  font-size: 20px;
-  height: 60px;
+  font-size: 23px;
+  height: 70px;
   border: none;
   border-radius: 15px;
   color: white;
   padding: 0 30px;
+  background: #465bc5;
+  box-shadow: 0 5px #797be7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.start-btn:hover {
+  box-shadow: 0 0 #4433ff;
+  top: 5px;
+}
+
+.start-btn:active {
+  box-shadow: 0 0 #9392a7;
+  top: 5px;
 }
 
 .start a {
   text-decoration: none;
   color: white;
 }
+
+/* QUIZ PAGE */
 
 .quizpage-container {
   margin: 0 auto;
@@ -53,6 +86,8 @@ code {
   font-size: 50px;
 }
 
+/* QUESTION COMPONENTS */
+
 .question-box {
   font-size: 25px;
   font-weight: bold;
@@ -63,6 +98,8 @@ code {
 .question-number {
   color: #6e7fd4;
 }
+
+/* QUESTION BUTTONS */
 
 .unselected {
   background: #414d8b;
@@ -79,22 +116,19 @@ code {
 .wrong {
   background: rgb(199, 73, 73);
   box-shadow: 0 3px #f07b7b;
-
 }
 
 .correct {
   background: rgb(117, 204, 117);
   box-shadow: 0 3px #b3fcb3;
-
 }
-
 
 button:disabled,
 button[disabled]{
   color: black;
 }
 
-.css-button-3d--blue {
+.answer-btn {
   min-width: 130px;
   height: 40px;
   font-weight: bold;
@@ -109,14 +143,16 @@ button[disabled]{
   border-radius: 5px;
   border: none;
 }
-.css-button-3d--blue:hover {
+
+.answer-btn:hover {
   top: 1px;
 }
-.css-button-3d--blue:active {
+
+.answer-btn:active {
   top: 5px;
 }
 
-.css-button-2 {
+.endgame-btn {
   margin: 45px 10px;
   min-width: 200px;
   height: 50px;
@@ -134,19 +170,15 @@ button[disabled]{
   background: #465bc5;
   box-shadow: 0 5px #6282b3;
 }
-.css-button-2:hover {
+
+.endgame-btn:hover {
   box-shadow: 0 3px #4433ff;
   top: 1px;
 }
-.css-button-2:active {
+
+.endgame-btn:active {
   box-shadow: 0 0 #4433ff;
   top: 5px;
 }
 
-.loading-container {
-  font-weight: bold;
-  font-size:70px;
-  margin: 100px auto;
-  max-width: 1000px;
-  text-align: center;
-}
+

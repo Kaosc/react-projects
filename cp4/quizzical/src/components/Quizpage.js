@@ -32,7 +32,6 @@ export default function Quizpage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
-
     function handleButtonClick (e) {
         const {id, value} = e.target
         setQuestions(prevQuestions => prevQuestions.map(question => {
@@ -72,7 +71,7 @@ export default function Quizpage() {
                 {questionElements}
 
                 <button 
-                className="css-button-2" 
+                className="endgame-btn" 
                 hidden={isDataFetched ? false : true} 
                 onClick={gameStatus ? checkAnswers : restartGame}
                 >

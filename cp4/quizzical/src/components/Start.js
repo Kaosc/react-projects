@@ -5,8 +5,12 @@ export default function Start() {
 
     return (
         <div className="start">
-        <h1>Quizzical</h1>
-        <button><Link to="/quizpage"><p>Start Quiz</p></Link></button>
+        <h1 className="start-title">Quizzical</h1>
+        <button className="start-btn">
+            <Link to="/quizpage">
+                <p>Start</p>
+            </Link>
+        </button>
     </div>
     )
 
